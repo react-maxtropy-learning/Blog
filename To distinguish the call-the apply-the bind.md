@@ -1,4 +1,4 @@
-### Shaallow discuss the apply, the call, the bind.
+### Shallow discuss the apply, the call, the bind.
 - The existence of apply and call is to change the direction of this inside of the function body. let take a chestnut :
 ``` 
 function People(){}
