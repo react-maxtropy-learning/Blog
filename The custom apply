@@ -1,0 +1,23 @@
+### Implement apply on your own, just out of curiosity
+```
+Function.prototype.apply2 = function(obj, arg) {
+  var t = typeof obj == 'object' && !!obj ? obj : window,
+    res;
+  t.func = this;//let func = thid.bind(t)
+  if(arg) {
+    if(!Array.isArray(arg)) throw 'arg is not array';
+    res = t.func(...arg); // the method of call is as follows
+  } else {
+    res = t.func();
+  }
+  delete t.func;
+  return res;
+};
+```
+- The difference between apply and call is the method of communication.if it is call.the reference is as follows
+```
+ES6
+Array.from(arg).toString()
+ES5
+eval() 
+```
